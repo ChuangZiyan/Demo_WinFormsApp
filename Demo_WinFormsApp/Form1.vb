@@ -79,7 +79,7 @@
                 If ListView1.Items.Count > Selected_idx Then
                     ListView1.Items(Selected_idx).Selected = True
 
-                    Your_sub() ' 改成你要的事件
+                    Your_sub() ' 改成你要的事件 'test
                 End If
 
                 Await Delay_msec(500)
