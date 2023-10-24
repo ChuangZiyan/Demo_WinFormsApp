@@ -20,8 +20,8 @@
     Private Sub Init_ListBox()
 
         ListBox1.Items.Add("Item A")
-        ListBox1.Items.Add("Item B")
-        ListBox1.Items.Add("Item C")
+        'ListBox1.Items.Add("Item B")
+        'ListBox1.Items.Add("Item C")
 
     End Sub
 
@@ -77,6 +77,7 @@
                     Max_Listview_item = ListView1.Items.Count
                 End If
                 'ListView1.BackColor = Color.White
+                ListView1.SelectedItems.Clear()
                 If ListView1.Items.Count > Selected_idx Then
 
                     ListView1.Items(Selected_idx).Selected = True
