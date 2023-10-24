@@ -67,6 +67,7 @@
         While True
 
             For i = 0 To ListBox1.Items.Count - 1
+
                 ListBox1.SelectedIndex = i
                 Await Delay_msec(500)
 
@@ -75,8 +76,9 @@
                 If ListView1.Items.Count > Max_Listview_item Then
                     Max_Listview_item = ListView1.Items.Count
                 End If
-
+                'ListView1.BackColor = Color.White
                 If ListView1.Items.Count > Selected_idx Then
+
                     ListView1.Items(Selected_idx).Selected = True
 
                     Your_sub() ' 改成你要的事件 'test
@@ -88,7 +90,7 @@
 
             Selected_idx += 1
 
-            If Selected_idx = Max_Listview_item Then
+            If Selected_idx >= Max_Listview_item Then
                 Exit While
             End If
 
@@ -98,7 +100,9 @@
 
     End Sub
 
-
+    Private Sub Restore_listview_back_color()
+        ListView1.BackColor = Color.White
+    End Sub
 
     Private Sub Your_sub()
         ' add your code here
